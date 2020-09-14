@@ -14,6 +14,9 @@ RSpec.describe "Posts", type: :request do
 # resopone.status この記述によりレスポンスステータスが受け取る事ができる
 				expect(response.status).to eq 200
 			end
+			it 'タイトルが正しく表示されていること' do
+				expect(response.body).to include("新規投稿")
+			end
 		end
 	end
 end
